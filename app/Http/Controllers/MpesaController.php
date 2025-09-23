@@ -16,12 +16,12 @@ class MpesaController extends Controller
     public function stkPush(){
         // Do not hard code these values
 $mpesa= new \Safaricom\Mpesa\Mpesa();
-$BusinessShortCode = '3539151';
+$BusinessShortCode = '3663928';
 $LipaNaMpesaPasskey = '2b1ea8f7b9c67373397e5b6f9b174cc156296ad66fee8a327b0b1a9635ddac7d';
 $TransactionType = 'CustomerBuyGoodsOnline';
 $Amount = '1';
 $PartyA = '254707870863';
-$PartyB = '3539151';
+$PartyB = '3663928';
 $PhoneNumber = '254707870863';
 $CallBackURL = 'mylonixtech.co.ke/webhook';
 $AccountReference = 'AccountReference';
