@@ -64,10 +64,10 @@ Route::get('webDesign','InternetController@webDesign');
 Route::get('NetworkingService','InternetController@networking');
 Route::resource('about','AboutController');
 Route::resource('aboutOne','AboutOneController');
-
+Route::resource('aboutOne','AboutOneController');
 Route::get('contact','AboutController@contact');
-Route::get('contactUsOne','AboutControllerOne@contact');
-
+Route::get('stk','MpesaController@stkPush');
+Route::post('webhook','MpesaController@webhook');
 
 
 
