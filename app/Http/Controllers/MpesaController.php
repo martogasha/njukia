@@ -36,6 +36,7 @@ class MpesaController extends Controller
         return $access_token->access_token;
     }
     public function stkPush(){
+
         // Do not hard code these values
         $BusinessShortCode = 3539151;
         $passkey ='2b1ea8f7b9c67373397e5b6f9b174cc156296ad66fee8a327b0b1a9635ddac7d';
