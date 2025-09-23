@@ -36,6 +36,25 @@ class MpesaController extends Controller
         return $access_token->access_token;
     }
     public function stkPush(){
+             $consumer_key ="9oGILLoBvSbQaAs7LuVSBMCGBBCa7GVpxsBOMci0X6XQD446";
+        $consumer_secret = "SjlHhvlgmGsY9zGV5SK5hlX3NqFM7AYcyM571bMtsAo8DDBnPwVlAJJAA0VsKIQG";
+        $credentials = base64_encode($consumer_key.":".$consumer_secret);
+        
+        $url = 'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+  
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Basic '.$credentials)); //setting a custom header
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  
+        $curl_response = curl_exec($curl);
+  
+        $access_token = json_decode($curl_response);
+
+        $token = $access_token->access_token;
 
         // Do not hard code these values
         $BusinessShortCode = 3539151;
@@ -52,7 +71,10 @@ class MpesaController extends Controller
   
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Content-Type:application/json','Authorization:Bearer ACCESS_TOKEN')); //setting custom header
+          curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'Content-Type:application/json; charset=utf8',
+            'Authorization:Bearer ' . $token
+        )); //setting custom header
         
         
         $curl_post_data = array(
