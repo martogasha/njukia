@@ -83,7 +83,7 @@ class MpesaController extends Controller
           'Password' => $password,
           'Timestamp' => $timestamp,
           'TransactionType' => 'CustomerBuyGoodsOnline',
-          'Amount"' => $Amount,
+          'Amount' => $Amount,
           'PartyA' => $PartyA,
           'PartyB' => $PartyB,
           'PhoneNumber' => $PartyA,
