@@ -62,9 +62,9 @@ class MpesaController extends Controller
         $timestamp= Carbon::rawParse('now')->format('YmdHms');
 
         $password = base64_encode($BusinessShortCode.$passkey.$timestamp);
-        $Amount = '1';
-        $PartyA = '254707870863';
-        $PartyB = '3539151';
+        $Amount = 1;
+        $PartyA = 254707870863;
+        $PartyB = 3539151;
 
 
         $url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
@@ -98,9 +98,7 @@ class MpesaController extends Controller
         curl_setopt($curl, CURLOPT_POST, true);
         curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
         
-        $curl_response = curl_exec($curl);
-        dd($curl_response);
-        
+        $curl_response = curl_exec($curl)        
         
         return $curl_response;
 
