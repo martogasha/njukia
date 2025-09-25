@@ -108,8 +108,8 @@ class MpesaController extends Controller
         $pesa = $request->json()->all();
 
      $pesa['Body']['stkCallback']['CallbackMetadata']['Item']; 
-     if ($item['Name'] == 'Amount') {
-            $amount = $item['Value'];
+     if ($pesa['Name'] == 'Amount') {
+            $amount = $pesa['Value'];
         }
         log::info($amount);
     
