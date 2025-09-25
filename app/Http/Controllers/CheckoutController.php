@@ -36,7 +36,7 @@ class   CheckoutController extends Controller
             return redirect(url('Login'));
         }
     }
-     public function placeOrderOne()
+     public function placeOrderOne(Request $request)
     {
    
           $oldCart = Session::get('cat');
