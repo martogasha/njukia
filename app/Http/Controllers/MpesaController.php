@@ -107,11 +107,20 @@ class MpesaController extends Controller
         
         $pesa = $request->json()->all();
 
-     $item = $pesa['Body']['stkCallback']['CallbackMetadata']['Item']; 
-     if ($item['Name'] == 'Amount') {
+         foreach ($data['Body']['stkCallback']['CallbackMetadata']['Item'] as $item) {
+        if ($item['Name'] == 'MpesaReceiptNumber') {
+            $mpesaReceiptNumber = $item['Value'];
+        } elseif ($item['Name'] == 'Amount') {
             $amount = $item['Value'];
+                    log::info($amount);
+
+        } elseif ($item['Name'] == 'PhoneNumber') {
+            $phoneNumber = $item['Value'];
+        } elseif ($item['Name'] == 'TransactionDate') {
+            $transactionDate = $item['Value'];
         }
-        log::info($amount);
+    }
+
     
       
     }
