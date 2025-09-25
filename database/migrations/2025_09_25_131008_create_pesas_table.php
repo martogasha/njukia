@@ -15,6 +15,11 @@ class CreatePesasTable extends Migration
     {
         Schema::create('pesas', function (Blueprint $table) {
             $table->id();
+             $table->integer('amount');
+            $table->integer('status');
+            $table->string('date');
+            $table->string('phone');
+            $table->string('reference')->unique();
             $table->timestamps();
         });
     }

@@ -44,7 +44,7 @@
             <!-- End .header-bottom -->
         </header>
         <!-- End .header -->
-        @include('flash-message')
+        
 
         <main class="main main-test">
             <div class="container checkout-container">
@@ -181,7 +181,7 @@
                         </ul>
                     </div>
                     <!-- End .col-lg-8 -->
-
+                        @include('flash-message')
                     <div class="col-lg-5">
                         <div class="order-summary">
                             <h3>YOUR ORDER</h3>

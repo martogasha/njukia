@@ -120,6 +120,13 @@ class MpesaController extends Controller
     }
 
         log::info($amount);
+        $pesa = new Pesa();
+        $pesa->amount = $amount;
+        $pesa->phone = $phoneNumber;
+        $pesa->date = $transactionDate;
+        $pesa->reference = $mpesaReceiptNumber;
+        $pesa->status = '0';
+        $pesa->save();
 
       
     }
