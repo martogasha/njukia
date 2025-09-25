@@ -244,9 +244,9 @@
                                     </div>
                             </div>
 
-                            <a href="javascript:document.getElementById('checkout-form').submit();" class="btn btn-dark btn-place-order" form="checkout-form">
+                            <button class="btn btn-dark btn-place-order" type="submit" form="checkout-form">
                                 Place order
-							</a>
+                            </button>
                         </div>
                         </form>
                         <!-- End .cart-summary -->
