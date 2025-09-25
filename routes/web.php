@@ -66,6 +66,8 @@ Route::resource('about','AboutController');
 Route::resource('aboutOne','AboutOneController');
 Route::resource('aboutOne','AboutOneController');
 Route::get('contact','AboutController@contact');
+Route::get('stk','MpesaController@stkPush');
+Route::post('storeWebhooks','MpesaController@storeWebhooks');
 Route::get('generateAccessToken','MpesaController@generateAccessToken');
 
 
