@@ -87,7 +87,7 @@ class MpesaController extends Controller
           'PartyA' => $PartyA,
           'PartyB' => $PartyB,
           'PhoneNumber' => $PartyA,
-          'CallBackURL' => 'https://mylonixtech.co.ke/webhook',
+          'CallBackURL' => 'https://mylonixtech.co.ke/storeWebhook',
           'AccountReference' => 'CodeXcellent Education ',
           'TransactionDesc' => 'Testing stkpush on Sandbox '
         );
@@ -103,7 +103,7 @@ class MpesaController extends Controller
 
         return view('customer.checkout')->with('success','PAYMENT RECEIVED');
     }
-    public function webhook(Request $request){
+    public function storeWebhook(Request $request){
         
         log::info($request->all);
       
