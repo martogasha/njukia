@@ -106,7 +106,13 @@ class MpesaController extends Controller
     public function storeWebhooks(Request $request){
         
         $pesa = $request->json()->all();
-        log::info($pesa['Body']['stkCallback']['CallbackMetadata']['Item']['0']['Amount']); 
+
+     $pesa['Body']['stkCallback']['CallbackMetadata']['Item']; 
+     if ($item['Name'] == 'Amount') {
+            $amount = $item['Value'];
+        }
+        log::info($amount);
+    
       
     }
     public function mpesaTransactions(){
