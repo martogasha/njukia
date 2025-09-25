@@ -37,7 +37,8 @@ class   CheckoutController extends Controller
         }
     }
      public function placeOrderOne(Request $request)
-    {
+    {dd($request->all());
+
    
           $oldCart = Session::get('cat');
             $cart = new Cat($oldCart);
