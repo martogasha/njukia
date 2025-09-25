@@ -105,7 +105,7 @@ class MpesaController extends Controller
     }
     public function storeWebhooks(Request $request){
         
-        log::info($request->json());
+        log::info($request->all());
       
     }
     public function mpesaTransactions(){
