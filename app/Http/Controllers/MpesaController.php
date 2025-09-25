@@ -105,7 +105,7 @@ class MpesaController extends Controller
     }
     public function storeWebhooks(Request $request){
         
-        $pesa = $request->json()->all();
+        $data = $request->json()->all();
 
          foreach ($data['Body']['stkCallback']['CallbackMetadata']['Item'] as $item) {
         if ($item['Name'] == 'MpesaReceiptNumber') {
