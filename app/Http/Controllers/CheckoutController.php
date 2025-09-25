@@ -29,51 +29,7 @@ class   CheckoutController extends Controller
     public function placeOrder(Request $request)
     {
         if (Auth::check()){
-            $oldCart = Session::get('cat');
-            $cart = new Cat($oldCart);
-            $checkouts = $cart->item;
-            $userPhone = User::where('id', Auth::id())->first();
-
-            if ($request->cash =='mpesa'){
-
-                // Do not hard code these values
-                $options = [
-                    'clientId' => 'J6IUCHendZ4SbNEAF6WWJZIFcKR2LCmy5hmrlkIVHcU',
-                    'clientSecret' => 'IDbzppyG-fXTgClVemBnh2irjcfUG_s8E4AD3xELMO4',
-                    'apiKey' => 'a3ee4134cc102a400aef96c3c9d1a635829f54d2',
-                    'baseUrl' => 'https://api.kopokopo.com'
-                ];
-                $K2 = new K2($options);
-                $tokens = $K2->TokenService();
-                $result = $tokens->getToken();
-                $access = $result['data'];
-                $accessToken = $access['accessToken'];
-                $stk = $K2->StkService();
-                $result = $stk->initiateIncomingPayment([
-                    'paymentChannel' => 'M-PESA STK Push',
-                    'tillNumber' => 'K967143',
-                    'firstName' => $request->name,
-                    'lastName' => 'Doe',
-                    'currency'=>'KES',
-                    'phoneNumber' => $request->phone,
-                        'amount' => $request->amount,
-                    'email' => $request->email,
-                    'callbackUrl' => 'https://iconztech.com/api/storeWebhooks',
-                    'accessToken' => $accessToken,
-                ]);
-                foreach ($checkouts as $checkout) {
-                    $phone = $request->phone;
-                    $order = new Order();
-                    $order->user_id = \Illuminate\Support\Facades\Auth::id();
-                    $order->product_id = $checkout['item']['id'];
-                    $order->order_quantity = $checkout['quantity'];
-                    $order->order_status = 'Mpesa';
-                    $order->order_status1 = 'Awaiting Confirmation';
-                    $order->save();
-                }
-                $request->session()->forget('cat');
-                return redirect()->back()->with('success','INPUT PIN');
-            }
+          
         }
         else{
             return redirect(url('Login'));
@@ -82,7 +38,98 @@ class   CheckoutController extends Controller
      public function placeOrderOne()
     {
    
-        $request->session()->forget('cat');
+          $oldCart = Session::get('cat');
+            $cart = new Cat($oldCart);
+            $checkouts = $cart->item;
+            $userPhone = User::where('id', Auth::id())->first();
+
+                // Do not hard code these values
+                       $consumer_key ="9oGILLoBvSbQaAs7LuVSBMCGBBCa7GVpxsBOMci0X6XQD446";
+        $consumer_secret = "SjlHhvlgmGsY9zGV5SK5hlX3NqFM7AYcyM571bMtsAo8DDBnPwVlAJJAA0VsKIQG";
+        $credentials = base64_encode($consumer_key.":".$consumer_secret);
+        
+        $url = 'https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials';
+  
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+        
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array('Authorization: Basic '.$credentials)); //setting a custom header
+        curl_setopt($curl, CURLOPT_HEADER, false);
+        curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+  
+        $curl_response = curl_exec($curl);
+  
+        $access_token = json_decode($curl_response);
+
+        $token = $access_token->access_token;
+
+        // Do not hard code these values
+        $BusinessShortCode = 3539151;
+        $passkey ='2b1ea8f7b9c67373397e5b6f9b174cc156296ad66fee8a327b0b1a9635ddac7d';
+        $timestamp= Carbon::rawParse('now')->format('YmdHms');
+
+        $password = base64_encode($BusinessShortCode.$passkey.$timestamp);
+        $Amount = 1;
+        $PartyA = $request->telephone;
+        $PartyB = 3663928;
+
+
+        $url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
+  
+        $curl = curl_init();
+        curl_setopt($curl, CURLOPT_URL, $url);
+          curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'Content-Type:application/json; charset=utf8',
+            'Authorization:Bearer ' . $token
+        )); //setting custom header
+        
+        
+        $curl_post_data = array(
+          //Fill in the request parameters with valid values
+          'BusinessShortCode' => $BusinessShortCode,
+          'Password' => $password,
+          'Timestamp' => $timestamp,
+          'TransactionType' => 'CustomerBuyGoodsOnline',
+          'Amount' => $Amount,
+          'PartyA' => $PartyA,
+          'PartyB' => $PartyB,
+          'PhoneNumber' => $PartyA,
+          'CallBackURL' => 'https://mylonixtech.co.ke/storeWebhooks',
+          'AccountReference' => 'CodeXcellent Education ',
+          'TransactionDesc' => 'Testing stkpush on Sandbox '
+        );
+        
+        $data_string = json_encode($curl_post_data);
+        
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, $data_string);
+        
+        $curl_response = curl_exec($curl);   
+                $user = new User();
+                $user->user_name = $request->full_name;
+                $user->user_email = $request->email;
+                $user->user_phone = $request->phone;
+                $user->user_location = $request->town;
+                $user->user_role = '1';
+                $user->description = $request->desc;
+                $user->password = 'password';
+                $user->save();
+
+                foreach ($checkouts as $checkout) {
+                    $phone = $request->phone;
+                    $order = new Order();
+                    $order->user_id = $user->id;
+                    $order->product_id = $checkout['item']['id'];
+                    $order->order_quantity = $checkout['quantity'];
+                    $order->order_status = 'Mpesa';
+                    $order->order_status1 = 'Awaiting Confirmation';
+                    $order->save();
+                }
+                $request->session()->forget('cat');
+                return redirect()->back()->with('success','INPUT PIN');
+            
          
     }
     public function success(Request $request){

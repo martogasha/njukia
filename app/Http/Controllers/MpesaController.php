@@ -63,7 +63,7 @@ class MpesaController extends Controller
 
         $password = base64_encode($BusinessShortCode.$passkey.$timestamp);
         $Amount = 1;
-        $PartyA = 254707870863;
+        $PartyA = +254707870863;
         $PartyB = 3663928;
 
 

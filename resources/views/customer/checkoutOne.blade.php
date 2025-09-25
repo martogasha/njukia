@@ -140,154 +140,43 @@
                                 <h2 class="step-title">Billing details</h2>
 
                                 <form action="#" id="checkout-form">
-                                    <div class="row">
-                                        <div class="col-md-6">
                                             <div class="form-group">
-                                                <label>First name
+                                                <label>Full Name
                                                     <abbr class="required" title="required">*</abbr>
                                                 </label>
-                                                <input type="text" class="form-control" required />
+                                                <input type="text" name='full_name' class="form-control" required />
                                             </div>
-                                        </div>
-
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Last name
-                                                    <abbr class="required" title="required">*</abbr></label>
-                                                <input type="text" class="form-control" required />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="select-custom">
-                                        <label>Country / Region
-                                            <abbr class="required" title="required">*</abbr></label>
-                                        <select name="orderby" class="form-control">
-                                            <option value="" selected="selected">Vanuatu
-                                            </option>
-                                            <option value="1">Brunei</option>
-                                            <option value="2">Bulgaria</option>
-                                            <option value="3">Burkina Faso</option>
-                                            <option value="4">Burundi</option>
-                                            <option value="5">Cameroon</option>
-                                        </select>
-                                    </div>
 
                                     <div class="form-group">
                                         <label>Town / City
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text" class="form-control" required />
+                                        <input type="text" name='town' class="form-control" required />
                                     </div>
 
                                   
 
                                     <div class="form-group">
                                         <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" class="form-control" required />
+                                        <input type="tel" name='phone' class="form-control" required />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Email address
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="email" class="form-control" required />
+                                        <input type="email" name='email' class="form-control" required />
                                     </div>
 
-                                    <div class="form-group mb-1">
-                                        <div class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" id="create-account" />
-                                            <label class="custom-control-label" data-toggle="collapse" data-target="#collapseThree" aria-controls="collapseThree" for="create-account">Create an
-                                                account?</label>
-                                        </div>
-                                    </div>
-
-                                    <div id="collapseThree" class="collapse">
-                                        <div class="form-group">
-                                            <label>Create account password
-                                                <abbr class="required" title="required">*</abbr></label>
-                                            <input type="password" placeholder="Password" class="form-control" required />
-                                        </div>
-                                    </div>
+                               
 
                             
 
-                                    <div id="collapseFour" class="collapse">
-                                        <div class="shipping-info">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>First name <abbr class="required"
-                                                                title="required">*</abbr></label>
-                                                        <input type="text" class="form-control" required />
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label>Last name <abbr class="required"
-                                                                title="required">*</abbr></label>
-                                                        <input type="text" class="form-control" required />
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Company name (optional)</label>
-                                                <input type="text" class="form-control">
-                                            </div>
-
-                                            <div class="select-custom">
-                                                <label>Country / Region <span class="required">*</span></label>
-                                                <select name="orderby" class="form-control">
-                                                    <option value="" selected="selected">Vanuatu</option>
-                                                    <option value="1">Brunei</option>
-                                                    <option value="2">Bulgaria</option>
-                                                    <option value="3">Burkina Faso</option>
-                                                    <option value="4">Burundi</option>
-                                                    <option value="5">Cameroon</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="form-group mb-1 pb-2">
-                                                <label>Street address <abbr class="required"
-                                                        title="required">*</abbr></label>
-                                                <input type="text" class="form-control" placeholder="House number and street name" required />
-                                            </div>
-
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Apartment, suite, unit, etc. (optional)" required />
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Town / City <abbr class="required"
-                                                        title="required">*</abbr></label>
-                                                <input type="text" class="form-control" required />
-                                            </div>
-
-                                            <div class="select-custom">
-                                                <label>State / County <abbr class="required"
-                                                        title="required">*</abbr></label>
-                                                <select name="orderby" class="form-control">
-                                                    <option value="" selected="selected">NY</option>
-                                                    <option value="1">Brunei</option>
-                                                    <option value="2">Bulgaria</option>
-                                                    <option value="3">Burkina Faso</option>
-                                                    <option value="4">Burundi</option>
-                                                    <option value="5">Cameroon</option>
-                                                </select>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label>Postcode / ZIP <abbr class="required"
-                                                        title="required">*</abbr></label>
-                                                <input type="text" class="form-control" required />
-                                            </div>
-                                        </div>
-                                    </div>
+                               
 
                                     <div class="form-group">
                                         <label class="order-comments">Order notes (optional)</label>
-                                        <textarea class="form-control" placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
+                                        <textarea class="form-control" name='desc' placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
                                     </div>
-                                </form>
+                                
                             </li>
                         </ul>
                     </div>
@@ -332,27 +221,7 @@
                                         </td>
                                     </tr>
                                     <tr class="order-shipping">
-                                        <td class="text-left" colspan="2">
-                                            <h4 class="m-b-sm">Shipping</h4>
-
-                                            <div class="form-group form-group-custom-control">
-                                                <div class="custom-control custom-radio d-flex">
-                                                    <input type="radio" class="custom-control-input" name="radio" checked />
-                                                    <label class="custom-control-label">Local Pickup</label>
-                                                </div>
-                                                <!-- End .custom-checkbox -->
-                                            </div>
-                                            <!-- End .form-group -->
-
-                                            <div class="form-group form-group-custom-control mb-0">
-                                                <div class="custom-control custom-radio d-flex mb-0">
-                                                    <input type="radio" name="radio" class="custom-control-input">
-                                                    <label class="custom-control-label">Flat Rate</label>
-                                                </div>
-                                                <!-- End .custom-checkbox -->
-                                            </div>
-                                            <!-- End .form-group -->
-                                        </td>
+                                      
 
                                     </tr>
 
@@ -368,18 +237,18 @@
                             </table>
 
                             <div class="payment-methods">
-                                <h4 class="">Payment methods</h4>
-                                <div class="info-box with-icon p-0">
-                                    <p>
-                                        Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.
-                                    </p>
-                                </div>
+                                <h4 class="">Payment methods (MPESA)</h4>
+                                   <div class="form-group">
+                                        <label>Phone <abbr class="required" title="required">*</abbr></label>
+                                        <input type="tel" name='telephone' class="form-control" required />
+                                    </div>
                             </div>
 
                             <a href="{{url('success')}}" class="btn btn-dark btn-place-order" form="checkout-form">
                                 Place order
 							</a>
                         </div>
+                        </form>
                         <!-- End .cart-summary -->
                     </div>
                     <!-- End .col-lg-4 -->
