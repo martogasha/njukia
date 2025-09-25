@@ -140,6 +140,7 @@
                                 <h2 class="step-title">Billing details</h2>
 
                                 <form action="{{url('placeOrder')}}" method="post" id="checkout-form">
+                                    @csrf
                                             <div class="form-group">
                                                 <label>Full Name
                                                     <abbr class="required" title="required">*</abbr>
