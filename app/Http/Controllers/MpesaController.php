@@ -112,8 +112,6 @@ class MpesaController extends Controller
             $mpesaReceiptNumber = $item['Value'];
         } elseif ($item['Name'] == 'Amount') {
             $amount = $item['Value'];
-                    log::info($amount);
-
         } elseif ($item['Name'] == 'PhoneNumber') {
             $phoneNumber = $item['Value'];
         } elseif ($item['Name'] == 'TransactionDate') {
@@ -121,7 +119,8 @@ class MpesaController extends Controller
         }
     }
 
-    
+        log::info($amount);
+
       
     }
     public function mpesaTransactions(){
