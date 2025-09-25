@@ -139,31 +139,31 @@
                             <li>
                                 <h2 class="step-title">Billing details</h2>
 
-                                <form action="#" id="checkout-form">
+                                <form action="{{url('placeOrder')}}" method="post" id="checkout-form">
                                             <div class="form-group">
                                                 <label>Full Name
                                                     <abbr class="required" title="required">*</abbr>
                                                 </label>
-                                                <input type="text" name='full_name' class="form-control" required />
+                                                <input type="text" name="full_name" class="form-control" required />
                                             </div>
 
                                     <div class="form-group">
                                         <label>Town / City
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text" name='town' class="form-control" required />
+                                        <input type="text" name="town" class="form-control" required />
                                     </div>
 
                                   
 
                                     <div class="form-group">
                                         <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" name='phone' class="form-control" required />
+                                        <input type="tel" name="phone" class="form-control" required />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Email address
                                             <abbr class="required" title="required">*</abbr></label>
-                                        <input type="email" name='email' class="form-control" required />
+                                        <input type="email" name="email" class="form-control" required />
                                     </div>
 
                                
@@ -174,7 +174,7 @@
 
                                     <div class="form-group">
                                         <label class="order-comments">Order notes (optional)</label>
-                                        <textarea class="form-control" name='desc' placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
+                                        <textarea class="form-control" name="desc" placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
                                     </div>
                                 
                             </li>
@@ -239,12 +239,12 @@
                             <div class="payment-methods">
                                 <h4 class="">Payment methods (MPESA)</h4>
                                    <div class="form-group">
-                                        <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" name='telephone' class="form-control" required />
+                                        <label>Phone <b>(+2540712345678)</b> <abbr class="required" title="required">*</abbr></label>
+                                        <input type="tel" name="telephone" class="form-control" placeholder='+2540712345678' required />
                                     </div>
                             </div>
 
-                            <a href="{{url('success')}}" class="btn btn-dark btn-place-order" form="checkout-form">
+                            <a href="javascript:document.getElementById('checkout-form').submit();" class="btn btn-dark btn-place-order" form="checkout-form">
                                 Place order
 							</a>
                         </div>

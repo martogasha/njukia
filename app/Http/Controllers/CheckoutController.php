@@ -127,7 +127,6 @@ class   CheckoutController extends Controller
                     $order->order_status1 = 'Awaiting Confirmation';
                     $order->save();
                 }
-                $request->session()->forget('cat');
                 return redirect()->back()->with('success','INPUT PIN');
             
          
