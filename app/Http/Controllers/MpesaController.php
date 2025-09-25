@@ -64,7 +64,7 @@ class MpesaController extends Controller
         $password = base64_encode($BusinessShortCode.$passkey.$timestamp);
         $Amount = 1;
         $PartyA = 254707870863;
-        $PartyB = 3539151;
+        $PartyB = 3663928;
 
 
         $url = 'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
