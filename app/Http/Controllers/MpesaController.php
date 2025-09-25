@@ -104,6 +104,7 @@ class MpesaController extends Controller
         return view('customer.checkout')->with('success','PAYMENT RECEIVED');
     }
     public function webhook(Request $request){
+        $csrfToken = csrf_token();
         log::info($request->all);
       
     }
