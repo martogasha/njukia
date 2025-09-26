@@ -129,7 +129,7 @@ class MpesaController extends Controller
         $pesa->status = '0';
         $pesa->save();
 
-      return redirect()->route('sss');
+      return redirect()->back()->with('success','INPUT PIN');
     }
     public function mpesaTransactions(){
         $transactions = Pesa::all();
