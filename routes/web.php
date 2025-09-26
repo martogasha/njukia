@@ -52,7 +52,7 @@ Route::resource('Login','LoginController');
 Route::post('placeOrder','CheckoutController@placeOrderOne');
 Route::post('LoginUser','LoginController@login')->name('loginCustomOne');
 Route::post('RegisterUser','LoginController@register')->name('registerCustomOne');
-Route::get('success','CheckoutController@success');
+Route::get('success','CheckoutController@success')->name('sss');
 Route::resource('dashboard','DashController');
 Route::post('search','ProductController@search');
 Route::resource('trackOrder','TrackController');
