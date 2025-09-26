@@ -129,9 +129,9 @@ class MpesaController extends Controller
         $pesa->status = '0';
         $pesa->save();
 
-        if($amount!=null){
+     
       return view('customer.success');
-        }
+        
     }
     public function mpesaTransactions(){
         $transactions = Pesa::all();

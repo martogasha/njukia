@@ -25,12 +25,7 @@
                             </li>
                             <li>
                                 <a href="#">Categories</a>
-                                <ul>
-                                    @foreach($categories as $category)
-                                        <li><a href="{{url('Shop',$category->id)}}">{{$category->category_name}}</a></li>
-                                    @endforeach
-                                 
-                                </ul>
+                                
                             </li>
                             <li><a href="blog.html">Blog</a></li>
                        
