@@ -9,7 +9,7 @@
         "ext-json": "*",
         "composer-runtime-api": "^2",
         "brick/math": "^0.11.0",
-        "doctrine/dbal": "^3.6.6",
+        "doctrine/dbal": "^3.10",
         "dompdf/dompdf": "^1.0",
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^2.0",
