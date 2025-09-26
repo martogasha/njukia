@@ -361,6 +361,7 @@
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Payment Method</th>
+                        <th>Mpesa Phone</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -372,6 +373,7 @@
                         <td>{{$order->user->user_name}}</td>
                         <td>+254{{$order->user->user_phone}}</td>
                         <td><span class="badge badge-info">{{$order->order_status}}</span></td>
+                        <td>{{$order->mpesa_phone}}</td>
                         @if($order->order_status1=='Awaiting Confirmation')
                         <td><span class="badge badge-danger">{{$order->order_status1}}</span></td>
                         @elseif($order->order_status1=='Order on the Way')
