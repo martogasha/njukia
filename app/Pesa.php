@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pesa extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'amount','status','date','phone','reference'
+    ];
 }
