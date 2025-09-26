@@ -217,9 +217,7 @@
                     <li>
                         <a href="{{url('shop')}}" class="sf-with-ul">Categories</a>
                         <ul>
-                        @foreach($categories as $category)
-                            <li><a href="{{url('Shop',$category->id)}}">{{$category->category_name}}</a></li>
-                        @endforeach
+                       
                         </ul>
                     </li>
                  
