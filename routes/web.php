@@ -96,7 +96,7 @@ Route::post('eCategory','ProductOneController@eCategory');
 Route::get('editProductDetails/{id}','ProductController@editProductDetails');
 Route::get('editCategory/{id}','ProductOneController@editCategoryDetails');
 Route::post('confirmOrder','OrderController@confirm');
-Route::get('orderDetails','OrderController@orderDetails');
+Route::get('orderDetails/{id}','OrderController@orderDetails');
 Route::resource('rating','RatingController');
 Route::get('getRatings','RatingController@getRatings');
 Route::get('admin/mpesaTransactions','MpesaController@mpesaTransactions');

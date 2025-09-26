@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
 
     <!-- Title -->
-    <title>Davix - Orders</title>
+    <title>Mylonix - Orders</title>
 
 
     <!-- *************
@@ -351,7 +351,9 @@
                 <table class="table custom-table m-0">
                     <thead>
                     <tr>
-                        <th>#</th>
+           
+                        <th>Product_Name</th>
+                        <th>Qty</th>
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Payment Method</th>
@@ -362,7 +364,8 @@
                     <tbody  id="target">
                     @foreach($orders as $order)
                     <tr>
-                        <td># {{$order->id}}</td>
+                        <td>{{$order->product->product_name}}</td>
+                        <td>{{$order->order_quantity}}</td>
                         <td>{{$order->user->user_name}}</td>
                         <td>{{$order->user->user_phone}}</td>
                         <td><span class="badge badge-info">{{$order->order_status}}</span></td>

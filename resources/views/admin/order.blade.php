@@ -383,7 +383,7 @@
 
                         @endif
 
-                        <td><button type="button" class="btn btn-primary view" id="{{$order->user_id}}" data-toggle="modal" data-target=".bd-example-modal-lg">View</button>
+                        <td><a href="{{url('orderDetails',$order->user_id)}}" class="btn btn-primary">View</a>
                         </td>
                     </tr>
                     @endforeach
