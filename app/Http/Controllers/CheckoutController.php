@@ -6,6 +6,7 @@ use App\Cat;
 use App\Order;
 use App\User;
 use App\Category;
+use App\Pesa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Kopokopo\SDK\K2;

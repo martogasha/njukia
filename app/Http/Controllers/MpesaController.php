@@ -6,6 +6,7 @@ use App\Cat;
 use App\Mpesa;
 use App\Order;
 use App\User;
+use App\Pesa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Kopokopo\SDK\Helpers\Auth;
