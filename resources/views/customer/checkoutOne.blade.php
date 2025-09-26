@@ -200,7 +200,7 @@
 											<td class="product-col">
 												<h3 class="product-title">
 													{{$product['item']['product_name']}} ×
-													<span class="product-qty">{{$product['quantity']}}4</span>
+													<span class="product-qty">{{$product['quantity']}}</span>
 												</h3>
 											</td>
 
