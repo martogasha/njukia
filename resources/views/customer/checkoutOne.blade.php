@@ -150,20 +150,20 @@
                                     <div class="form-group">
                                         <label>Town / City
                                             </label>
-                                        <input type="text" name="town" class="form-control" />
+                                        <input type="text" name="town" class="form-control" required/>
                                     </div>
 
                                   
 
                                     <div class="form-group">
                                         <label>Phone</label>
-                                        <input type="tel" name="phone" class="form-control" />
+                                        <input type="tel" name="phone" class="form-control" required/>
                                     </div>
 
                                     <div class="form-group">
                                         <label>Email address
                                             </label>
-                                        <input type="email" name="email" class="form-control" />
+                                        <input type="email" name="email" class="form-control" required/>
                                     </div>
 
                                
