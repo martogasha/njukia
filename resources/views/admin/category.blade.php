@@ -58,7 +58,7 @@
 <header class="header">
     <div class="logo-wrapper">
         <a href="index.html" class="logo">
-            <img src="{{asset('images/dlogo.jpg')}}" alt="Wafi Admin Dashboard" />
+            <img src="{{asset('asseti/images/logo.png')}}" alt="Wafi Admin Dashboard" />
         </a>
 
     </div>
@@ -282,7 +282,7 @@
     ************* -->
 
     <!-- Footer start -->
-    <footer class="main-footer">© Davix 2020</footer>
+    <footer class="main-footer">© Mylonix 2025</footer>
     <!-- Footer end -->
 
 </div>
