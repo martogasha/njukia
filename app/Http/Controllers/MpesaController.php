@@ -130,7 +130,7 @@ class MpesaController extends Controller
         $pesa->save();
 
      
-            return redirect()->back()->with('success', 'Order Payment Successfully');
+    return redirect()->action([CheckoutController::class, 'success']);
         
     }
     public function mpesaTransactions(){
