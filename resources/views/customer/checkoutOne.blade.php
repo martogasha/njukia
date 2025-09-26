@@ -143,28 +143,27 @@
                                     @csrf
                                             <div class="form-group">
                                                 <label>Full Name
-                                                    <abbr class="required" title="required">*</abbr>
                                                 </label>
-                                                <input type="text" name="full_name" class="form-control" required />
+                                                <input type="text" name="full_name" class="form-control" />
                                             </div>
 
                                     <div class="form-group">
                                         <label>Town / City
-                                            <abbr class="required" title="required">*</abbr></label>
-                                        <input type="text" name="town" class="form-control" required />
+                                            </label>
+                                        <input type="text" name="town" class="form-control" />
                                     </div>
 
                                   
 
                                     <div class="form-group">
-                                        <label>Phone <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" name="phone" class="form-control" required />
+                                        <label>Phone</label>
+                                        <input type="tel" name="phone" class="form-control" />
                                     </div>
 
                                     <div class="form-group">
                                         <label>Email address
-                                            <abbr class="required" title="required">*</abbr></label>
-                                        <input type="email" name="email" class="form-control" required />
+                                            </label>
+                                        <input type="email" name="email" class="form-control" />
                                     </div>
 
                                
@@ -175,7 +174,7 @@
 
                                     <div class="form-group">
                                         <label class="order-comments">Order notes (optional)</label>
-                                        <textarea class="form-control" name="desc" placeholder="Notes about your order, e.g. special notes for delivery." required></textarea>
+                                        <textarea class="form-control" name="desc" placeholder="Notes about your order, e.g. special notes for delivery."></textarea>
                                     </div>
                                 
                             </li>
@@ -242,8 +241,8 @@
                                 @include('flash-message')
                                 <h4 class="">Payment methods (MPESA)</h4>
                                    <div class="form-group">
-                                        <label>Phone <b>(+2540712345678)</b> <abbr class="required" title="required">*</abbr></label>
-                                        <input type="tel" name="telephone" class="form-control" placeholder='+2540712345678' required />
+                                        <label>Phone <b>(+2540712345678)</b></label>
+                                        <input type="tel" name="telephone" class="form-control" placeholder='+2540712345678'/>
                                     </div>
                             </div>
 
@@ -251,6 +250,16 @@
                                 Place order
                             </button>
                         </div>
+                        </form>
+                        <h4 class="">Confirm Mpesa Transaction</h4>
+                        <form action="{{url('confirmTransaction')}}" method="post">
+                                    @csrf
+                                   <div class="form-group">
+                                        <input type="text" name="ref" class="form-control" placeholder='THDBDHFFJF' />
+                                    </div>
+                                      <button class="btn btn-dark btn-place-order" type="submit">
+                                Confirm
+                            </button>
                         </form>
                         <!-- End .cart-summary -->
                     </div>

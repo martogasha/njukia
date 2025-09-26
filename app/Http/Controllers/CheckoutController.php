@@ -148,4 +148,14 @@ class   CheckoutController extends Controller
             'totalPrice'=>$cart->totalPrice,
         ]);
     }
+    public function confirmTransaction(Request $request){
+        $getPesa = Pesa::where('reference',$request->ref)->first();
+        if($getPesa){
+        return redirect('success');
+        }
+        else{
+            return redirect()->back()->with('error','Try Again');
+            
+        }
+    }
 }

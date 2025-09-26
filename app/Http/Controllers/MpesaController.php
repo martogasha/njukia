@@ -129,9 +129,7 @@ class MpesaController extends Controller
         $pesa->status = '0';
         $pesa->save();
 
-     return response()->json([
-            'redirect' => url('success') // Or route('dashboard')
-        ]);
+    
         
     }
     public function mpesaTransactions(){
