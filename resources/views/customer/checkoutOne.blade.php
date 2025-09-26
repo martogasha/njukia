@@ -231,7 +231,7 @@
                                             <h4>Total</h4>
                                         </td>
                                         <td>
-                                            <input type=hidden name="amount"></input>
+                                            <input type=hidden name="amount" value="{{number_format($totalPrice, 0, '.', ',')}}"></input>
                                             <b class="total-price"><span>Ksh{{ number_format($totalPrice, 0, '.', ',') }}</span></b>
                                         </td>
                                     </tr>
