@@ -94,7 +94,7 @@
 					<nav id="navigation" class="navigation navigation-landscape">
 						<div class="nav-header">
 							<a class="nav-brand" href="#">
-								<img src="asse/img/logo.png" class="logo" alt="" />
+								<img src="{{asset('asseti/images/logo.png')}}" class="logo" alt="" />
 							</a>
 							<div class="nav-toggle"></div>
 							<div class="mobile_nav">
@@ -353,7 +353,7 @@
 							
 							<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
 								<div class="footer_widget">
-									<img src="asse/img/logo.png" class="img-footer small mb-2" alt="" />
+									<img src="{{asset('asseti/images/logo.png')}}" class="img-footer small mb-2" alt="" />
 									
 									<div class="address mt-3">
 										3298 Grant Street Longview, TX<br>United Kingdom 75601	

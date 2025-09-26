@@ -78,7 +78,7 @@
                                     <li><a href="demo1-contact.html">Contact Us</a></li>
                                     <li><a href="{{url('shop')}}">Shop</a></li>
                                     <li><a href="{{url('cart')}}">Cart</a></li>
-                                    <li><a href="{{url('Login')}}" class="login-link">Log In</a></li>
+                                    <li><a href="{{url('Login')}}">Log In</a></li>
                                 </ul>
                             </div>
                             <!-- End .header-menu -->
