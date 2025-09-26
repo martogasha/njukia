@@ -359,7 +359,6 @@
                         <th>Payment Method</th>
                         <th>Mpesa Phone</th>
                         <th>Status</th>
-                        <th>Actions</th>
                     </tr>
                     </thead>
                     <tbody  id="target">
@@ -373,7 +372,6 @@
                         <td><span class="badge badge-info">{{$order->order_status}}</span></td>
                         <td>{{$order->mpesa_phone}}</td>
                         <td><span class="badge badge-success">{{$order->order_status1}}</span></td>
-                        <td><button type="button" class="btn btn-primary view" id="{{$order->user_id}}" data-toggle="modal" data-target=".bd-example-modal-lg">View</button>
                         </td>
                     </tr>
                     @endforeach
