@@ -351,12 +351,13 @@
                 <table class="table custom-table m-0">
                     <thead>
                     <tr>
-           
                         <th>Product_Name</th>
                         <th>Qty</th>
+                        <th>Amount</th>
                         <th>Name</th>
                         <th>Phone</th>
                         <th>Payment Method</th>
+                        <th>Mpesa Phone</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -366,9 +367,11 @@
                     <tr>
                         <td>{{$order->product->product_name}}</td>
                         <td>{{$order->order_quantity}}</td>
+                        <td>{{number_format($order->product->product_price * $order->order_quantity, 0, '.', ',')}}</td>
                         <td>{{$order->user->user_name}}</td>
                         <td>{{$order->user->user_phone}}</td>
                         <td><span class="badge badge-info">{{$order->order_status}}</span></td>
+                        <td>{{$order->mpesa_phone}}</td>
                         <td><span class="badge badge-success">{{$order->order_status1}}</span></td>
                         <td><button type="button" class="btn btn-primary view" id="{{$order->user_id}}" data-toggle="modal" data-target=".bd-example-modal-lg">View</button>
                         </td>
