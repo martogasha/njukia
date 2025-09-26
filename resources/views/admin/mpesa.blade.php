@@ -352,7 +352,6 @@
                     <thead>
                     <tr>
                         <th>Reference</th>
-                        <th>Name</th>
                         <th>Phone Number</th>
                         <th>Amount</th>
                         <th>Date</th>
@@ -362,7 +361,6 @@
                     @foreach($transactions as $transaction)
                     <tr>
                         <td>{{$transaction->reference}}</td>
-                        <td>{{$transaction->user->user_name}}</td>
                         <td>{{$transaction->phone}}</td>
                         <td>{{$transaction->amount}}</td>
                         <td><span class="badge badge-info">{{$transaction->date}}</span></td>

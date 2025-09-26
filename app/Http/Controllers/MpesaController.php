@@ -120,7 +120,7 @@ class MpesaController extends Controller
         }
     }
 
-        log::info($amount);
+       
         $pesa = new Pesa();
         $pesa->amount = $amount;
         $pesa->phone = $phoneNumber;
@@ -132,7 +132,7 @@ class MpesaController extends Controller
       
     }
     public function mpesaTransactions(){
-        $transactions = Mpesa::all();
+        $transactions = Pesa::all();
         return view('admin.mpesa',[
             'transactions'=>$transactions
         ]);
