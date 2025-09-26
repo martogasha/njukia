@@ -238,6 +238,7 @@
                             </table>
 
                             <div class="payment-methods">
+                                @include('flash-message')
                                 <h4 class="">Payment methods (MPESA)</h4>
                                    <div class="form-group">
                                         <label>Phone <b>(+2540712345678)</b> <abbr class="required" title="required">*</abbr></label>
