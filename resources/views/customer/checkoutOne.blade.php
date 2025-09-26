@@ -182,7 +182,7 @@
                         </ul>
                     </div>
                     <!-- End .col-lg-8 -->
-                        @include('flash-message')
+                      
                     <div class="col-lg-5">
                         <div class="order-summary">
                             <h3>YOUR ORDER</h3>
@@ -231,6 +231,7 @@
                                             <h4>Total</h4>
                                         </td>
                                         <td>
+                                            <input type=hidden name="amount"></input>
                                             <b class="total-price"><span>Ksh{{ number_format($totalPrice, 0, '.', ',') }}</span></b>
                                         </td>
                                     </tr>

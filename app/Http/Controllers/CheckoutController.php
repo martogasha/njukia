@@ -72,7 +72,7 @@ class   CheckoutController extends Controller
         $timestamp= Carbon::rawParse('now')->format('YmdHms');
 
         $password = base64_encode($BusinessShortCode.$passkey.$timestamp);
-        $Amount = 1;
+        $Amount = $request->amount;
         $PartyA = $request->telephone;
         $PartyB = 3663928;
 
