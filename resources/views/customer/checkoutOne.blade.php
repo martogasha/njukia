@@ -242,7 +242,7 @@
                                 <h4 class="">Payment methods (MPESA)</h4>
                                    <div class="form-group">
                                         <label>Phone</label>
-                                        <input type="tel" name="telephone" class="form-control" placeholder='0712345678'/>
+                                        <input type="tel" name="telephone" class="form-control" placeholder='0712345678'required/>
                                     </div>
                             </div>
 

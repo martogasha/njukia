@@ -39,6 +39,8 @@ class   CheckoutController extends Controller
     }
      public function placeOrderOne(Request $request)
     {
+        $formattedNumber = $request->amount;
+        $cleanedNumber = str_replace(',', '', $formattedNumber); // Result: "1234567"
         $phoneNumber = $request->telephone;
         $modifiedNumber = ltrim($phoneNumber, "0");
         $code = '254';
@@ -77,7 +79,7 @@ class   CheckoutController extends Controller
         $timestamp= Carbon::rawParse('now')->format('YmdHms');
 
         $password = base64_encode($BusinessShortCode.$passkey.$timestamp);
-        $Amount = $request->amount;
+        $Amount = $cleanedNumber;
         $PartyA = $finalNumber;
         $PartyB = 3663928;
 
