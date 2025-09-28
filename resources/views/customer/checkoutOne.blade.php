@@ -251,6 +251,8 @@
                             </button>
                         </div>
                         </form>
+                       <div>
+                        </div>
                         <h4 class="">Confirm Mpesa Transaction</h4>
                         <form action="{{url('confirmTransaction')}}" method="post">
                                     @csrf
@@ -263,6 +265,7 @@
                         </form>
                         <!-- End .cart-summary -->
                     </div>
+                     
                     <!-- End .col-lg-4 -->
                 </div>
                 <!-- End .row -->
@@ -465,6 +468,7 @@
 
     <!-- Main JS File -->
     <script src="asseti/js/main.min.js"></script>
+    
 </body>
 
 
