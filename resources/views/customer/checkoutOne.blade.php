@@ -132,7 +132,7 @@
                         </div>
                     </div>
                 </div>
-
+@include('flash-message')
                 <div class="row">
                     <div class="col-lg-7">
                         <ul class="checkout-steps">
