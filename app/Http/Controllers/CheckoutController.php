@@ -39,7 +39,7 @@ class   CheckoutController extends Controller
     }
      public function placeOrderOne(Request $request)
     {
-        $phoneNumber = "07123456789";
+        $phoneNumber = $request->telephone;
         $modifiedNumber = ltrim($phoneNumber, "0");
         $code = '254';
         $finalNumber = $code . $modifiedNumber;
