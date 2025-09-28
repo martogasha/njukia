@@ -234,35 +234,26 @@
   <div class="slides" id="slides">
      <div class="slide">
       <a href="http://localhost/njukia/public/productDetail/233" target="_blank">
-        <img src="asseti/images/demoes/demo1/slider/Slider.jpg" alt="Slide 3">
+        <img src="asseti/images/demoes/demo1/slider/slider.jpg" alt="Slide 3">
       </a>
     </div>
     <div class="slide">
       <a href="http://localhost/njukia/public/productDetail/121" target="_blank">
-        <img src="asseti/images/demoes/demo1/slider/slide-1.png" alt="Slide 1">
+        <img src="asseti/images/demoes/demo1/slider/slider1.jpg" alt="Slide 1">
       </a>
     </div>
     <div class="slide">
       <a href="https://example.com/2" target="_blank">
-        <img src="asseti/images/demoes/demo1/slider/slide-11.jpg" alt="Slide 2">
+        <img src="asseti/images/demoes/demo1/slider/slider2.jpg" alt="Slide 2">
       </a>
     </div>
-    <div class="slide">
-      <a href="https://example.com/3" target="_blank">
-        <img src="asseti/images/demoes/demo1/slider/Slider.jpg" alt="Slide 3">
-      </a>
-    </div>
-    <div class="slide">
-      <a href="https://example.com/4" target="_blank">
-        <img src="https://animesonlinecc.to/wp-content/uploads/2025/08/tVxMUKikosBfusJgdPSPt8yTHln-300x170.jpg" alt="Slide 4">
-      </a>
-    </div>
+ 
+  
   </div>
 </div>
 
 <div class="indicators" id="indicators">
   <div class="indicator active"><div class="progress"></div></div>
-  <div class="indicator"><div class="progress"></div></div>
   <div class="indicator"><div class="progress"></div></div>
   <div class="indicator"><div class="progress"></div></div>
 </div>
