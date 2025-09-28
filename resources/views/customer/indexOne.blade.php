@@ -233,17 +233,17 @@
                        <div class="slider">
   <div class="slides" id="slides">
      <div class="slide">
-      <a href="http://localhost/njukia/public/productDetail/233" target="_blank">
+      <a href="https://mylonixtech.co.ke/productDetail/281" target="_blank">
         <img src="asseti/images/demoes/demo1/slider/slider.jpg" alt="Slide 3">
       </a>
     </div>
     <div class="slide">
-      <a href="http://localhost/njukia/public/productDetail/121" target="_blank">
+      <a href="https://mylonixtech.co.ke/productDetail/282" target="_blank">
         <img src="asseti/images/demoes/demo1/slider/slider1.jpg" alt="Slide 1">
       </a>
     </div>
     <div class="slide">
-      <a href="https://example.com/2" target="_blank">
+      <a href="https://mylonixtech.co.ke/productDetail/283" target="_blank">
         <img src="asseti/images/demoes/demo1/slider/slider2.jpg" alt="Slide 2">
       </a>
     </div>
