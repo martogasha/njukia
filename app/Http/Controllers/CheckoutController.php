@@ -135,7 +135,7 @@ class   CheckoutController extends Controller
                     $order->order_status = 'Mpesa';
                     $order->order_status1 = 'Awaiting Confirmation';
                     $order->mpesa_phone = $request->telephone;
-                    $order->total = $request->amount;
+                    $order->total = $cleanedNumber;
                     $order->save();
                 }
                 return redirect()->back()->with('success','INPUT PIN');
