@@ -39,6 +39,10 @@ class   CheckoutController extends Controller
     }
      public function placeOrderOne(Request $request)
     {
+        $phoneNumber = "07123456789";
+        $modifiedNumber = ltrim($phoneNumber, "0");
+        $code = '254';
+        $finalNumber = $code . $modifiedNumber;
         
    
           $oldCart = Session::get('cat');
@@ -74,7 +78,7 @@ class   CheckoutController extends Controller
 
         $password = base64_encode($BusinessShortCode.$passkey.$timestamp);
         $Amount = $request->amount;
-        $PartyA = $request->telephone;
+        $PartyA = $finalNumber;
         $PartyB = 3663928;
 
 

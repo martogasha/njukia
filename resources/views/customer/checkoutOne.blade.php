@@ -241,8 +241,8 @@
                                 @include('flash-message')
                                 <h4 class="">Payment methods (MPESA)</h4>
                                    <div class="form-group">
-                                        <label>Phone <b>(2540712345678)</b></label>
-                                        <input type="tel" name="telephone" class="form-control" placeholder='2540712345678'/>
+                                        <label>Phone</label>
+                                        <input type="tel" name="telephone" class="form-control" placeholder='0712345678'/>
                                     </div>
                             </div>
 
