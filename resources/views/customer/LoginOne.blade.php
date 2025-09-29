@@ -7,7 +7,7 @@
 		<meta name="author" content="Themezhub" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-        <title>Vivi- Login Page</title>
+        <title>Mylonix - Login Page</title>
 		 <link rel="icon" type="image/x-icon" href="asse/img/fav.png">
         <!-- Custom CSS -->
         <link href="asse/css/styles.css" rel="stylesheet">
