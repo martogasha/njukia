@@ -5,7 +5,7 @@
             </a>
         </div>
         <div class="sticky-info">
-            <a href="{{url('blog')}}" class="">
+            <a href="#" class="">
                 <i class="icon-bars"></i>Blog
             </a>
         </div>
@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="sticky-info">
-            <a href="https://www.portotheme.com/html/porto_ecommerce/my-account.html" class="">
+            <a href="{{url('Login')}}" class="">
                 <i class="icon-user-2"></i>Account
             </a>
         </div>
