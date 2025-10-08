@@ -5,7 +5,7 @@
             </a>
         </div>
         <div class="sticky-info">
-            <a href="#" class="">
+            <a href="{{url('blog')}}" class="">
                 <i class="icon-bars"></i>Blog
             </a>
         </div>
