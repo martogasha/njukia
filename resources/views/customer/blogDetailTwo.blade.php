@@ -156,17 +156,11 @@
 								<h4 class="widget-title">Blog Categories</h4>
 
 								<ul class="list">
-									<li>
-										<a href="#">All about clothing</a>
-
-										<ul class="list">
-											<li><a href="#">Dresses</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Make-up &amp; beauty</a></li>
-									<li><a href="#">Accessories</a></li>
-									<li><a href="#">Fashion trends</a></li>
-									<li><a href="#">Haircuts &amp; hairstyles</a></li>
+									
+									<li><a href="#">TV &amp; Accessories</a></li>
+									<li><a href="#">Fridges</a></li>
+									<li><a href="#">Sound Systems</a></li>
+									<li><a href="#">Cookers &amp; Microwave</a></li>
 								</ul>
 							</div><!-- End .widget -->
 
