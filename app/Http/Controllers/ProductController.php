@@ -30,10 +30,12 @@ class ProductController extends Controller
         $oldCart = Session::get('cat');
         $cart = new Cat($oldCart);
         $blogs = Blog::all();
-        return view('customer.blogOne',[
+        $categories = Category::all();
+        return view('customer.blogTwo',[
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice,
-            'blogs'=>$blogs
+            'blogs'=>$blogs,
+            'categories' => $categories
         ]);
     }
     public function blogDetail($id,$name){
@@ -44,6 +46,20 @@ class ProductController extends Controller
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice,
             'detail'=>$detail,
+
+        ]);
+
+    }
+    public function blogDetailOne($id){
+        $detail = Blog::find($id);
+        $oldCart = Session::get('cat');
+        $cart = new Cat($oldCart);
+        $categories = Category::all();
+        return view('customer.blogDetailTwo',[
+            'products'=>$cart->item,
+            'totalPrice'=>$cart->totalPrice,
+            'detail'=>$detail,
+            'categories' => $categories
 
         ]);
 

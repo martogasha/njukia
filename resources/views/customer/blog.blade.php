@@ -16,7 +16,7 @@
             @foreach($blogs as $blog)
             <div class="blog-item col-md-6 mb_30">
                 <div class="post-format">
-                    <div class="thumb post-img"><a href="{{url('blog',['id'=>$blog->id,'name'=>$blog->title])}}"> <img src="{{asset('uploads/product/'.$blog->image)}}"  alt="fastro"></a></div>
+                    <div class="thumb post-img"><a href="{{url('blog',$blog->id)}}"> <img src="{{asset('uploads/product/'.$blog->image)}}"  alt="fastro"></a></div>
                     <div class="post-type"><i class="fa fa-music" aria-hidden="true"></i></div>
                 </div>
                 <div class="post-info mtb_20 ">

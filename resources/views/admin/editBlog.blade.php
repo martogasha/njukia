@@ -13,7 +13,7 @@
     <link rel="shortcut icon" href="{{asset('images/favicon.png')}}" />
 
     <!-- Title -->
-    <title>Davix - Edit {{$blog->title}}</title>
+    <title>Mylonix - Edit {{$blog->title}}</title>
 
 
     <!-- *************
@@ -505,7 +505,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Link Name:</label>
-                                <input type="text" class="form-control" value="{{$blog->link}}" name="link" id="recipient-name">
+                                <input type="text" class="form-control" value="{{$blog->linkName}}" name="linkName" id="recipient-name">
                             </div>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Detail One:</label>

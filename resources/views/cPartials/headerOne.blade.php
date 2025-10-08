@@ -47,7 +47,7 @@
                             <div class="header-menu">
                                 <ul>
                                     <li><a href="dashboard.html">My Account</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
+                                    <li><a href="{{url('blog')}}">Blog</a></li>
                                     <li><a href="{{url('shop')}}">Shop</a></li>
                                     <li><a href="cart.html">Cart</a></li>
                                 </ul>

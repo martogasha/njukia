@@ -22,6 +22,7 @@ Route::get('hhh','ProductController@home');
 Route::get('/','ProductController@homeOne');
 Route::get('blog','ProductController@blog');
 Route::get('blogOne','ProductOneController@blog');
+Route::get('blog/{id}','ProductController@blogDetailOne');
 Route::get('blog/{id}/{name}','ProductController@blogDetail');
 Route::resource('productDetail','ProductDetailController');
 Route::resource('Shop','ProductShopController');
