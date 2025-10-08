@@ -583,7 +583,7 @@
                              
                               
                                     
-                                    <li><a href="{{url('Shop',23)}}"><i class="icon-cat-gift"></i>ACCCESSORIES!</a></li>
+                                    <li><a href="{{url('Shop',23)}}"><i class="icon-cat-gift"></i>ACCESSORIES!</a></li>
                                         <li>
                                         <a href="#" class="sf-with-ul"><i class="sicon-badge"></i>CATEGORIES</a>
                                     
@@ -593,7 +593,7 @@
                                         @endforeach
                                     </ul>
                                     </li>
-                                    <li><a href="blog.html"><i class="sicon-book-open"></i>Blog</a></li>
+                                    <li><a href="{{url('blog')}}"><i class="sicon-book-open"></i>Blog</a></li>
                                     
                                 </ul>
                             </nav>
@@ -769,7 +769,7 @@
                     </li>
                  
                  
-                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="{{url('blog')}}">Blog</a></li>
                 </ul>
 
                 <ul class="mobile-menu">
