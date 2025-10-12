@@ -6,6 +6,7 @@ use App\Advert;
 use App\Blog;
 use App\Cat;
 use App\Product;
+use App\Listing;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -55,11 +56,13 @@ class ProductController extends Controller
         $oldCart = Session::get('cat');
         $cart = new Cat($oldCart);
         $categories = Category::all();
+        $listings = Listing::where('blog_id',$id)->get();
         return view('customer.blogDetailTwo',[
             'products'=>$cart->item,
             'totalPrice'=>$cart->totalPrice,
             'detail'=>$detail,
-            'categories' => $categories
+            'categories' => $categories,
+            'listings' => $listings
 
         ]);
 

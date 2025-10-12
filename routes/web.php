@@ -80,6 +80,7 @@ Route::get('admin/order','OrderController@index');
 Route::get('admin/blog','BlogController@index');
 Route::get('edit/{id}','BlogController@edit');
 Route::post('eBlog','BlogController@eBlog');
+Route::post('eBlogListing','BlogController@eBlogListing');
 Route::post('storeBlog','BlogController@storeBlog');
 Route::get('ajax','OrderController@getOrderDetails');
 Route::get('adminGallery','GalleryController@adminGallery');

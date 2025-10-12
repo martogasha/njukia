@@ -71,6 +71,14 @@
                             <br>
 								<div class="post-content">
 									<p>{{$detail->detail}} <a href="{{$detail->link}}" style="color:#08C">{{$detail->linkName}}</a> {{$detail->detailOne}}</p>
+									@if (count($listings) > 0)
+									<ul>
+									@foreach($listings as $listing)
+									<a href="{{$listing->link}}" target="_blank"><h2 class="post-title" style="font-size:17px;"> {{$listing->name}}</h2></a>
+									@endforeach
+									</ul>
+									@endif
+									<hr>
 									<p>{{$detail->detailTwo}} <a href="{{$detail->linkOne}}" style="color:#08C">{{$detail->linkNameOne}}</a> {{$detail->detailThree}}</p>
 
 								</div><!-- End .post-content -->

@@ -550,6 +550,27 @@
                             <button type="submit" class="btn btn-info">Edit</button>
 
                         </form>
+                            <form action="{{url('eBlogListing')}}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            <input type="hidden" value="{{$blog->id}}" name="id">
+
+                            @foreach($listings as $listing)
+                            <label for="recipient-name" class="col-form-label">{{$listing->name}}</label> 
+                            <button type="button" class="btn btn-warning view" data-toggle="modal" data-target="#customModalTwo">
+                                edit
+                            </button><br>
+                            @endforeach
+                               <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">Name:</label>
+                                <input type="text" class="form-control" name="listname" id="recipient-name">
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-name" class="col-form-label">link:</label>
+                                <input type="text" class="form-control" name="link" id="recipient-name">
+                            </div>
+                            <button type="submit" class="btn btn-info">Edit List</button>
+
+                        </form>
                     </div>
                 </div>
                 <!-- Row end -->
@@ -579,7 +600,36 @@
 <!-- Modal -->
 
 
+<div class="modal fade" id="customModalTwo" tabindex="-1" role="dialog" aria-labelledby="customModalTwoLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form action="{{url('storeBlog')}}" method="post" enctype="multipart/form-data">
+                @csrf
+                <div class="modal-header">
+                    <h5 class="modal-title" id="customModalTwoLabel">Add Blog</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="listing">
+                   
+                   
 
+                </div>
+                <div class="modal-footer custom">
+
+                    <div class="left-side">
+                        <button type="button" class="btn btn-link danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="right-side">
+                        <button type="submit" class="btn btn-link success">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
 
@@ -619,6 +669,24 @@
 <script src="{{asset('asset/js/main.js')}}"></script>
 
 </body>
+<script>
+    $(document).on('click','.view',function () {
+        $value = $(this).attr('id');
+        $.ajax({
+            type:"get",
+            url:"{{url('ajax')}}",
+            data:{'order':$value},
+            success:function (data) {
+                $('#listing').html(data);
+            },
+            error:function (error) {
+                console.log(error)
+                alert('error')
 
+            }
+
+        });
+    });
+</script>
 <!-- Mirrored from bootstrap.gallery/wafi-admin/dashboard-v2/topbar/gallery.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 08 Jul 2020 08:13:29 GMT -->
 </html>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Blog;
 use App\Product;
+use App\Listing;
 use Faker\Provider\Image;
 use Illuminate\Http\Request;
 
@@ -19,8 +20,10 @@ class BlogController extends Controller
     }
     public function edit($id){
         $blog = Blog::find($id);
+        $listings = Listing::where('blog_id',$id)->get();
         return view('admin.editBlog',[
-            'blog'=>$blog
+            'blog'=>$blog,
+            'listings'=>$listings
         ]);
     }
     public function eBlog(Request $request){
@@ -52,6 +55,32 @@ class BlogController extends Controller
 
         return redirect()->back()->with('success','Blog Edited Successfully');
 
+    }
+     public function eBlogListing(Request $request){
+        $edit = new Listing();
+        $edit->name = $request->input('listname');
+        $edit->link = $request->input('link');
+        $edit->blog_id = $request->input('id');
+
+        $edit->save();
+
+
+        return redirect()->back()->with('success','Blog Edited Successfully');
+
+    }
+    public function ajax(){
+        $output = "";
+        $output = '
+         <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Name:</label>
+                        <input type="text" class="form-control" name="listname" id="recipient-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="message-text" class="col-form-label">Link:</label>
+                        <textarea class="form-control" name="link" id="message-text"></textarea>
+                    </div>
+        ';
+        return response($output);
     }
     public function storeBlog(Request $request){
         $pictures = new Blog();
