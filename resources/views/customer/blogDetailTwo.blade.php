@@ -48,7 +48,7 @@
 				<div class="container">
 					<ol class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{url('/')}}"><i class="icon-home"></i></a></li>
-						<li class="breadcrumb-item active" aria-current="page">{{\Illuminate\Support\Str::of($detail->title)->words(3)}}</li>
+						<li class="breadcrumb-item active" aria-current="page">{{\Illuminate\Support\Str::of($detail->title)}}</li>
 					</ol>
 				</div><!-- End .container -->
 			</nav>
@@ -79,7 +79,7 @@
 									</ul>
 									@endif
 									<hr>
-									<p>{{$detail->detailTwo}} <a href="{{$detail->linkOne}}" style="color:#08C">{{$detail->linkNameOne}}</a> {{$detail->detailThree}}</p>
+									<p>{{$detail->detailTwo}} <a href="{{$detail->linkOne}}" target="_blank" style="color:#08C">{{$detail->linkNameOne}}</a> {{$detail->detailThree}}</p>
 
 								</div><!-- End .post-content -->
 
