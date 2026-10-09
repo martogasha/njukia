@@ -1,4 +1,4 @@
-    @include('cPartials.header')
+        @include('cPartials.header')
     <title>Icons Computer - Home</title>
 
                     <div class="left-cms left-sidebar-widget mb_50">
