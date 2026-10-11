@@ -146,7 +146,7 @@
                         </div>
                         <!-- End .header-contact -->
 
-                        <a href="login.html" class="header-icon header-icon-user"><i class="icon-user-2"></i></a>
+                        <a href="{{url('Login')}}" class="header-icon header-icon-user"><i class="icon-user-2"></i></a>
 
                         <a href="wishlist.html" class="header-icon"><i class="icon-wishlist-2"></i></a>
 

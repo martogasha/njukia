@@ -93,7 +93,7 @@
 				<div class="container">
 					<nav id="navigation" class="navigation navigation-landscape">
 						<div class="nav-header">
-							<a class="nav-brand" href="#">
+							<a class="nav-brand" href="{{url('/')}}">
 								<img src="{{asset('asseti/images/logo.png')}}" class="logo" alt="" />
 							</a>
 							<div class="nav-toggle"></div>
@@ -356,10 +356,10 @@
 									<img src="{{asset('asseti/images/logo.png')}}" class="img-footer small mb-2" alt="" />
 									
 									<div class="address mt-3">
-										3298 Grant Street Longview, TX<br>United Kingdom 75601	
+										Nairobi, kenya<br>2026	
 									</div>
 									<div class="address mt-3">
-										1-202-555-0106<br>help@shopper.com
+										+254 728 422320<br>mylonixtech@gmail.com
 									</div>
 									<div class="address mt-3">
 										<ul class="list-inline">
